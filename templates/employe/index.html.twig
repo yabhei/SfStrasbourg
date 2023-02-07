@@ -19,4 +19,12 @@
 </div> #}
 
     <h1>Liste des employes</h1>
+
+    {% for employe in employes %}
+
+         <strong><a href="{{path('','')}}"> {{employe}} </a></strong><br>
+
+    {% endfor %}
+
+   
 {% endblock %}
