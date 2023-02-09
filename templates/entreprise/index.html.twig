@@ -8,7 +8,7 @@
 
     {% for entreprise in entreprises %}
 
-    <a href="{{ path('details_entreprise', {'id' : entreprise.id }) }}" >  {{entreprise}}  </a><br>
+   <strong> <a href="{{ path('details_entreprise', {'id' : entreprise.id }) }}" >  {{entreprise}}  </a> </strong><br>
 
     {% endfor %}
 

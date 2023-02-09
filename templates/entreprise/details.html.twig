@@ -12,10 +12,23 @@
         CP : {{ entreprise.cp}}<br>
         Date de creation  : {{ entreprise.dateCreation | date('d/m/Y')}} <br>
         Ville : {{ entreprise.ville}}<br>
+
         <h3>Liste des employes :</h3><br>
-        {% for employe in entreprise.employes %}
-            {{employe}}<br>
-        {% endfor %}
+        {% if entreprise.employes | length == 0 %}
+         
+         <p>
+          Pas des employes
+         </p><br>
+              
+        {% else %}
+            
+             {% for employe in entreprise.employes %}
+                    <strong><a href="{{path('details_employe',{ 'id': employe.id })}}"> {{employe}} </a></strong><br>
+                {% endfor %}
+        
+        {% endif %}
+        
+     
 
     </p>
 

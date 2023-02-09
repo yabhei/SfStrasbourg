@@ -9,7 +9,7 @@
     <p>
     Date de naissance : {{ employe.dateNaissance | date('d/m/Y')}} ({{employe.age }} ans)<br>
     Ville : {{ employe.ville }}<br>
-    Entreprise : {{ employe.entreprise}}<br>
+    Entreprise :  <a href=" {{ path('details_entreprise', {'id' : employe.entreprise.id }) }} " > {{ employe.entreprise}} </a><br>
     Date d'embauche : {{ employe.dateEmbauche | date('d/m/Y')}}<br>
 
     </p>

@@ -1,0 +1,45 @@
+body{
+    padding: 50px;
+}
+
+h1{
+    color: red;
+}
+
+h3{
+    color: blue;
+}
+
+* {
+    box-sizing: border-box;
+  }
+  
+  input[type=text] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+  }
+  
+  label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+  }
+  
+   #entreprise_submit {
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    margin: 4px 2px;
+    border-radius: 4px;
+    cursor: pointer;
+   
+  }
+  
+   #entreprise_submit:hover {
+    background-color: #45a049;
+  }
+
+ 
