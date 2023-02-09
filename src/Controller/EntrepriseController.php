@@ -23,4 +23,21 @@ class EntrepriseController extends AbstractController
         
         ]);
     }
+
+
+      /**
+     * @Route("/entreprise/{id}", name="details_entreprise")
+     */
+
+    public function  details_entreprise(Entreprise $entreprise): Response
+    {
+
+        return $this->render('entreprise/details.html.twig', [
+            'entreprise'=>$entreprise
+        
+        ]);
+
+    }
+
+
 }

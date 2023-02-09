@@ -26,11 +26,15 @@ class EmployeController extends AbstractController
 
     
 /**
-     * @Route("/employe/{id}", name="detailes_employe")
+     * @Route("/employe/{id}", name="details_employe")
      */
-    public function detailesEmploye(){
+    public function detailesEmploye(Employe $employe){
 
-        
+        return $this->render('employe/details.html.twig', [
+
+            'employe'=>$employe
+
+        ]);
 
 
     }
