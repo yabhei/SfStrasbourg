@@ -5,12 +5,18 @@
 {% block body %}
 
     <h1>Liste des entreprises</h1>
-
+<table>
+    <tbody>
     {% for entreprise in entreprises %}
 
-   <strong> <a href="{{ path('details_entreprise', {'id' : entreprise.id }) }}" >  {{entreprise}}  </a> </strong><br>
-
+    <tr>
+        <td><strong> <a href="{{ path('details_entreprise', {'id' : entreprise.id }) }}" >  {{entreprise}}  </a> </strong> </td>
+        <td> <a class="btn btn-danger"  href="{{path('delete_entreprise', {'id' : entreprise.id})}}">  Delete</a></td>
+    </tr>
     {% endfor %}
-    
+</tbody>
+</table>
+
+
    <br> <a class="btn btn-primary" href="{{path('add_entreprise')}}">Ajouter une Entreprise</a>
 {% endblock %}

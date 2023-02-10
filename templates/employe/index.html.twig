@@ -5,12 +5,21 @@
 {% block body %}
 
     <h1>Liste des employes</h1>
-
+    <table>
+        <tbody>
     {% for employe in employes %}
+   
+            <tr>
+                <td><strong><a href="{{path('details_employe',{ 'id': employe.id })}}"> {{employe}}  </a></strong> </td>
+                <td> <a class="btn btn-danger"  href="{{path('delete_employe', {'id' : employe.id})}}">  Delete</a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+          
+         
 
-         <strong><a href="{{path('details_employe',{ 'id': employe.id })}}"> {{employe}} </a></strong><br>
-
-    {% endfor %}
+   
 
     <br> <a class="btn btn-primary"  href="{{path('add_employe')}}">Ajouter un Employe</a>
 {% endblock %}

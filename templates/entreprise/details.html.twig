@@ -13,7 +13,7 @@
         Date de creation  : {{ entreprise.dateCreation | date('d/m/Y')}} <br>
         Ville : {{ entreprise.ville}}<br>
 
-        <a class="btn btn-primary" href="{{path('edit_entreprise',{ 'id': entreprise.id })}}"> Edit </a>
+        <a class="btn btn-warning" href="{{path('edit_entreprise',{ 'id': entreprise.id })}}"> Edit </a>
 
         <h3>Liste des employes :</h3><br>
         {% if entreprise.employes | length == 0 %}

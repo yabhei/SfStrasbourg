@@ -62,6 +62,21 @@ class EntrepriseController extends AbstractController
  
      }
 
+      /**
+     * @Route("/entreprise/{id}/delete", name="delete_entreprise")
+     */
+
+     
+     public function delete(ManagerRegistry $doctrine, Entreprise $entreprise): Response {
+
+        $entityManager = $doctrine->getManager();
+        $entityManager->remove($entreprise);
+        $entityManager->flush();
+
+        return $this->redirectToRoute('app_entreprise');
+
+     }
+
 
 
       /**

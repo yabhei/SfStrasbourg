@@ -13,6 +13,6 @@
     Date d'embauche : {{ employe.dateEmbauche | date('d/m/Y')}}<br>
 
     </p>
-    <br> <a class="btn btn-primary"  href="{{path('edit_employe' , {'id' : employe.id })}}">Edit</a>
+    <br> <a class="btn btn-warning"  href="{{path('edit_employe' , {'id' : employe.id })}}">Edit</a>
 
 {% endblock %}
