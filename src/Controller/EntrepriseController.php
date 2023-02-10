@@ -28,10 +28,15 @@ class EntrepriseController extends AbstractController
 
      /**
      * @Route("/entreprise/add", name="add_entreprise")
+     * @Route("/entreprise/{id}/edit", name="edit_entreprise")
      */
 
      public function  add(ManagerRegistry $doctrine, Entreprise $entreprise = null , Request $request): Response
      {
+
+        if (!$entreprise) {
+            $entreprise = new Entreprise();
+        }
 
         $form = $this->createForm(EntrepriseType::class, $entreprise);
         $form->handleRequest($request);

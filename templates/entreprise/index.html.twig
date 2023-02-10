@@ -11,5 +11,6 @@
    <strong> <a href="{{ path('details_entreprise', {'id' : entreprise.id }) }}" >  {{entreprise}}  </a> </strong><br>
 
     {% endfor %}
-
+    
+   <br> <a class="btn btn-primary" href="{{path('add_entreprise')}}">Ajouter une Entreprise</a>
 {% endblock %}
