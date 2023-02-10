@@ -56,7 +56,8 @@ class EmployeController extends AbstractController
 
            // to show the form of add 
         return $this->render('employe/add.html.twig', [
-            'formAddEmploye'=> $form->createView()
+            'formAddEmploye'=> $form->createView(),
+            'edit'=> $employe->getId()
         
         ]);
 
