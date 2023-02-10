@@ -19,6 +19,7 @@ class EntrepriseController extends AbstractController
     {   
         // get all entreprises in DB
         $entreprises = $doctrine->getRepository(Entreprise::class) ->findAll();
+        
         return $this->render('entreprise/index.html.twig', [
             'entreprises'=>$entreprises
         
