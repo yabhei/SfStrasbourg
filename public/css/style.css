@@ -56,4 +56,9 @@ h3{
     background-color: white;
   }
 
+  .nomprenom{
+    display: flex;
+    gap: 20px;
+  }
+
  

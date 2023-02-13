@@ -8,7 +8,19 @@
     {% else %}
             <h1>Ajouter un Employe : </h1>
      {% endif %}
-    <p>
-    {{ form(formAddEmploye) }}
-    </p>
+
+ {{ form_start(formAddEmploye) }}
+     
+<div class="nomprenom">
+     {{ form_row(formAddEmploye.nom) }}
+     {{ form_row(formAddEmploye.prenom) }}
+</div>
+     {{ form_row(formAddEmploye.dateNaissance) }}
+     {{ form_row(formAddEmploye.dateEmbauche) }}
+     {{ form_row(formAddEmploye.ville) }}
+     {{ form_row(formAddEmploye.entreprise) }}
+     {{ form_row(formAddEmploye.submit) }}
+ 
+ {{ form_end(formAddEmploye) }}
+
 {% endblock %}
